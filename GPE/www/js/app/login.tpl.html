@@ -1,0 +1,29 @@
+﻿<div ui-content-for="leftSidebar"></div>
+<div ui-content-for="sidebarToggle"></div>
+<div ui-content-for="back"></div>
+<div ui-content-for="title">
+    <span>Iniciar Sessão</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section">
+        <form role="form" ng-submit="login()" class="col-xs-12">
+            <fieldset>
+                <div class="form-group">
+                    <label>Nome de Utilizador</label>
+                    <input ng-model="model.username" class="form-control" placeholder="Nome de Utilizador" type="text" />
+                </div>
+
+                <div class="form-group">
+                    <label>Palavra-chave</label>
+                    <input ng-model="model.password" class="form-control" placeholder="Palavra-chave" type="password" />
+                </div>
+            </fieldset>
+            <ul ng-show="invalidLogin" class="text-danger"><li>Dados Inválidos</li></ul>
+            <hr />
+            <button type="submit" class="btn btn-primary pull-right">
+                Iniciar Sessão
+            </button>
+        </form>
+        <div ui-content-for="navbarAction"></div>
+    </div>
+</div>
